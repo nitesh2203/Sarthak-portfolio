@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Sarthak</a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#work">Work</a>
+            <a href="#services">My Services</a>
+            <a href="#skills-education">Skills & Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    <!-- Home Section -->
+    <section id="home">
+    <section class="home">
+        <div class="home-img">
+            <img src="main.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Sarthak</span></h1>
+            <h3 class="typing-text">I'm a <span class="typing"></span></h3>
+            <script>
+                const words = ["Video Editor", "Videographer", "Social Media Manager"];
+                let index = 0;
+                let currentText = "";
+                let isDeleting = false;
+                let typingSpeed = 100; // Speed of typing and backspacing
+                let pauseTime = 3000; // Pause time before changing the word
+            
+                function type() {
+                    const typingElement = document.querySelector('.typing');
+            
+                    // Determine if we are deleting or typing
+                    if (isDeleting) {
+                        currentText = words[index].substring(0, currentText.length - 1);
+                    } else {
+                        currentText = words[index].substring(0, currentText.length + 1);
+                    }
+            
+                    typingElement.textContent = currentText;
+            
+                    // Check if we have completed typing or deleting a word
+                    if (!isDeleting && currentText === words[index]) {
+                        // Wait before starting to delete the word
+                        setTimeout(() => {
+                            isDeleting = true; // Switch to deleting mode
+                        }, pauseTime);
+                    } else if (isDeleting && currentText === "") {
+                        // Move to the next word
+                        isDeleting = false; // Switch back to typing mode
+                        index = (index + 1) % words.length; // Move to the next word
+                    }
+            
+                    // Continue typing or deleting
+                    setTimeout(type, typingSpeed);
+                }
+            
+                type(); // Initial call to start the typing effect
+            </script>
+            
+            
+            
+            <p>a video editor, social media manager, and Videographer. I create impactful videos, craft engaging social media campaigns that connects with audiences. My goal is to bring ideas to life, grow brands, and tell stories that resonate. Let’s make something amazing together!</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/sarthaktried" target="_blank" class="social-icon">
+                    <i class="fa-brands fa-instagram"></i> <!-- Font Awesome icon -->
+                </a>
+            </div>
+            <a href="Sarthak Sharma Resume.pdf" class="btn" target="_blank">Resume</a>
+        </div>
+    </section>
+</section>
+<section id="work">
+    <section class="work">
+        <h2>My Work</h2>
+        <div class="work-content">
+            <!-- Video Items -->
+            <div class="work-item">
+                <video autoplay muted loop controls>
+                    <source src="Video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="work-item">
+                <video autoplay muted loop controls>
+                    <source src="Video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="work-item">
+                <video autoplay muted loop controls>
+                    <source src="Video3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="work-item">
+                <video autoplay muted loop controls>
+                    <source src="Video4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="work-item">
+                <video autoplay muted loop controls>
+                    <source src="Video5.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="work-item">
+                <video autoplay muted loop controls>
+                    <source src="Video6.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="work-item">
+                <video autoplay muted loop controls>
+                    <source src="Video7.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="work-item">
+                <video autoplay muted loop controls>
+                    <source src="Video8.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="work-item">
+                <video autoplay muted loop controls>
+                    <source src="Video9.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="work-item">
+                <video autoplay muted loop controls>
+                    <source src="Video10.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="work-item">
+                <video autoplay muted loop controls>
+                    <source src="Video11.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="work-item">
+                <video autoplay muted loop controls>
+                    <source src="Video12.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+    </section>
+<section id="services">
+    <section class="services" id="services">
+        <h2>My Services</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <i class="fa-solid fa-video"></i>
+                <h3>Video Editor</h3>
+                <p>As a Video Editor, I love bringing ideas to life on screen. I use tools like Adobe Premiere Pro and After Effects to transform raw footage into polished, visually striking videos that make an impact. Whether it’s a promotional clip, social media reel, or a full-length video, I’m dedicated to producing content that stands out.</p>
+            </div>
+            
+            <div class="service-box">
+                <i class="fa-solid fa-share-nodes"></i>
+                <h3>Social Media Manager</h3>
+                <p>In my role as a Social Media Manager, I focus on building and nurturing online communities. I create and curate content, plan campaigns, and engage with followers to help brands grow and connect. My goal is to make social media both fun and effective for my clients.</p>
+            </div>
+            
+            <div class="service-box">
+                <i class="fa-solid fa-camera"></i>
+                <h3>Videographer</h3>
+                <p>As a videographer, I capture and create compelling visual stories that bring moments and messages to life. With expertise in framing, lighting, and editing, I focus on producing high-quality videos that engage and resonate with audiences. Whether it’s promotional content, social media stories, or event coverage, my goal is to combine technical skills with creativity to deliver impactful visuals tailored to any platform.</p>
+            </div>
+        </div>
+    </section>
+</section>
+    
+    <!-- Skills Section -->
+    <section id="skills-education" class="skills-education">
+        <section class="skills-education">
+            <!-- Skills Section -->
+            <section class="skills">
+                <h2>My Skills</h2>
+                <div class="skills-content">
+                    <!-- Existing Skills -->
+                    <div class="skill">
+                        <i class="fa-solid fa-video"></i>
+                        <h3>Adobe Premiere Pro</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <i class="fa-solid fa-film"></i>
+                        <h3>Adobe After Effects</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <i class="fa-solid fa-adjust"></i>
+                        <h3>DaVinci Resolve</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- New Skills -->
+                    <div class="skill">
+                        <i class="fa-solid fa-camera"></i>
+                        <h3>Photography</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <i class="fa-solid fa-columns"></i>
+                        <h3>Layout and Composition</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <i class="fa-solid fa-palette"></i>
+                        <h3>Branding and Identity</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Education Section -->
+            <section class="education">
+                <h2>My Education</h2>
+                <div class="education-content">
+                    <div class="education-item">
+                        <h3>Springfield School</h3>
+                        <p>2015 - 2020</p>
+                    </div>
+                    <div class="education-item">
+                        <h3>Vijay Central Academy</h3>
+                        <p>2020 - 2022</p>
+                    </div>
+                    <div class="education-item">
+                        <h3>Rajasthan University</h3>
+                        <p>2023 - 2025</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        
+</section>
+
+    
+<!-- Experience Section -->
+
+<!-- Work Section -->
+<!-- Work Section -->
+
+<section id="experience">
+    <section class="experience">
+        <h2>My Experience</h2>
+        <div class="experience-content">
+            <div class="experience-item">
+                <h3>Photographer</h3>
+                <p>Abhyutthanam</p>
+                <span>2022 - Present</span>
+                <p>Worked as a photographer at a NGO - Abhyutthanam.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Senior Editor and Videographer</h3>
+                <p>Indieroots</p>
+                <span>2021 - 2022</span>
+                <p>Worked as an Senior Editor and Videographer in Event organiser called Indieroots</p>
+            </div>
+            <div class="experience-item">
+                <h3>Social Media Manager</h3>
+                <p>Oorjatheband</p>
+                <span>2020 - 2021</span>
+                <p>Worked as Social Media Manager for Oorjatheband for quite some time</p>
+            </div>
+            <div class="experience-item">
+                <h3>Full time editor and videographer</h3>
+                <p>samnotdrummer</p>
+                <span>2019 - 2020</span>
+                <p>Full time editor and videographer for instagram influencer/Drummer - @samnotdrummer</p>
+            </div>
+        </div>
+    </section>
+    </section>
+    <!-- Contact Section -->
+
+<section id="contact">
+    <!-- Assuming this is part of your existing HTML file -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>
+          For any inquiries or collaborations, feel free to reach out to me directly:
+        </p>
+        <a href="mailto:your-email@example.com?subject=Contact%20Request" class="contact-link">Contact Me: your-email@example.com</a>
+      </section>
+      
+      <style>
+        #contact {
+          text-align: center;
+          margin: 50px 0;
+          padding: 20px;
+        }
+      
+        #contact h2 {
+          font-size: 2em;
+          color: #a72626;
+          margin-bottom: 15px;
+        }
+      
+        #contact p {
+          font-size: 1.1em;
+          color: #666;
+          margin-bottom: 20px;
+        }
+      
+        .contact-link {
+          display: inline-block;
+          padding: 12px 25px;
+          color: #ffffff;
+          background-color: #e6541a;
+          text-decoration: none;
+          font-size: 1.1em;
+          font-weight: 500;
+          border-radius: 25px;
+          transition: background-color 0.3s, transform 0.2s;
+          box-shadow: 0 4px 15px rgba(0, 115, 230, 0.4);
+        }
+      
+        .contact-link:hover {
+          background-color: #005bb5;
+          transform: translateY(-3px);
+          box-shadow: 0 8px 20px rgba(0, 91, 181, 0.5);
+        }
+      </style>
+      
+  
+ 
+  
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
